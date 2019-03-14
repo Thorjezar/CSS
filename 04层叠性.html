@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css层叠性</title>
+		<style type="text/css">
+			#box1 p{
+				background-color: red; //显示这个
+			}
+			.warp1 div.warp2 .warp3 p{
+				background-color: green;
+			}
+			.warp1 .warp2 p{
+				background-color: blue;
+			}
+			/* 按照id选择器的数量 class选择器的数量 标签选择器的数量来决定显示哪个 */
+		</style>
+	</head>
+	<body>
+		<div id="box1" class="warp1">
+			<div id="box2" class="warp2">
+				<div id="box3" class="warp3">
+					<p>这是一个段落</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

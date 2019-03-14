@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>继承的属性权重</title>
+		<style type="text/css">
+			/* 1 1 1 */
+			/* .wrap1 #box3 p{
+				font-size: 20px;
+			} 
+			/* 1 1 1 */
+			/* #box1 .warp2 p{
+				font-size: 40px;
+			} */
+			
+			/* 继承权重为0 */
+			/* .wrap1 .wrap3{
+				font-size: 20px;
+			}
+			/* 继承权重为0 此时判断的标准就近原则 
+			#bo1 #box2{
+				font-size: 40px;
+			} */
+			
+			/* 都继承 并且描述的远近都一样 此时按照id数量 class数量 标签数量来决定  
+			#box1 #box3{
+				font-size: 40px;
+			}
+			.wrap1 .wrap3{
+				font-size: 20px;
+			}*/
+			
+			/* 继承来的 权重为0 此时根据就近原则，但是远近也一样
+			  则根据id选择器 class选择器 标签选择器数量，假如上述三个数字都一样
+			  此时后面的覆盖前面的*/			
+			.wrap1 #box3 {
+				font-size: 20px;  
+			}
+			#box1 .wrap3 {
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1" class="wrap1">
+			<div id="box2" class="wrap2">
+				<div id="box3" class="wrap3">
+					<p>这是一个段落</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
