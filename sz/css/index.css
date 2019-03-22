@@ -1,0 +1,41 @@
+/* banner 部分 */
+.banner {
+	width: 100%;
+	height: 460px;
+	overflow: hidden;
+	position:relative;
+}
+.banner .pictures li {
+	position: absolute;
+	top:0;
+	left: 50%;
+	width: 1920px;
+	margin-left:-960px;
+	display: none;
+}
+.banner .pictures li.active {
+	display: block;
+}
+
+.banner .ctrl {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 120px;
+	margin-left: -60px;
+	height: 12px;
+}
+
+.banner .ctrl li {
+	float:left;
+	width: 12px;
+	height: 12px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	opacity: 0.3;
+}
+
+.banner .ctrl li.last{
+	margin-right: 0;
+}
